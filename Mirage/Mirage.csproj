@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{e223ecff-5f8b-4b3f-936a-e85b36098e67}</ProjectGuid>
+    <ProjectGuid>{E223ECFF-5F8B-4B3F-936A-E85B36098E67}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Mirage</RootNamespace>
@@ -16,32 +16,71 @@
     <TargetFrameworkProfile>Profile32</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <TargetPlatform Include="Windows, Version=8.1" />
     <TargetPlatform Include="WindowsPhoneApp, Version=8.1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Collections\BidirectionalMap.cs" />
+    <Compile Include="Collections\DeltaList.cs" />
+    <Compile Include="Collections\DeltaListItem.cs" />
+    <Compile Include="Collections\Group.cs" />
+    <Compile Include="Collections\IAsyncEnumerable.cs" />
+    <Compile Include="Collections\IAsyncEnumerator.cs" />
+    <Compile Include="Collections\IGroup.cs" />
+    <Compile Include="Collections\ILazyObservableCollection.cs" />
+    <Compile Include="Collections\INotifyCollectionReset.cs" />
+    <Compile Include="Collections\IPagedCollection.cs" />
+    <Compile Include="Collections\KeyedList.cs" />
+    <Compile Include="Collections\LazyObservableCollection.cs" />
+    <Compile Include="Collections\ObservablePagedCollection.cs" />
+    <Compile Include="Collections\ObservableSortedGroup.cs" />
+    <Compile Include="Collections\SortedList.cs" />
+    <Compile Include="Collections\TimedCache.cs" />
+    <Compile Include="Converters\BooleanToOpacityConverter.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\InverseBooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\LessThanZeroVisibilityConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="Converters\VisibleWhenZeroConverter.cs" />
+    <Compile Include="ViewModel\AsyncCommand.cs" />
+    <Compile Include="ViewModel\CancelEventArgs.cs" />
+    <Compile Include="ViewModel\Command.cs" />
+    <Compile Include="ViewModel\CommandBase.cs" />
+    <Compile Include="ViewModel\DataViewModel.cs" />
+    <Compile Include="ViewModel\DelegateCommand.cs" />
+    <Compile Include="ViewModel\ExecutedEventArgs.cs" />
+    <Compile Include="ViewModel\IAsyncCommand.cs" />
+    <Compile Include="ViewModel\ICommand.cs" />
+    <Compile Include="ViewModel\IDataViewModel.cs" />
+    <Compile Include="ViewModel\IItemViewModel.cs" />
+    <Compile Include="ViewModel\ItemViewModel.cs" />
+    <Compile Include="ViewModel\StringExtensions.cs" />
+    <Compile Include="ViewModel\UriBuilder.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
+    <Compile Include="ViewModel\VoidType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -52,5 +91,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
 </Project>
