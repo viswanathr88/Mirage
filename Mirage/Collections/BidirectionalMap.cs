@@ -22,7 +22,7 @@ namespace Mirage.Collections
         /// <summary>
         /// Add a new key value pair to the map
         /// </summary>
-        /// <param name="key">key of type <see cref="T1"/></param>
+        /// <param name="key">key of type <typeparamref name="T1"/></param>
         /// <param name="value">value of type <see cref="T2"/></param>
         public void Add(T1 key, T2 value)
         {
@@ -77,7 +77,16 @@ namespace Mirage.Collections
         /// <param name="key">Key of type <see cref="T1"/></param>
         public void Remove(T1 key)
         {
-            forwardMap.Remove(key);
+            if (forwardMap.ContainsKey(key))
+            {
+                T2 val = forwardMap[key];
+                if (reverseMap.ContainsKey(val))
+                {
+                    reverseMap.Remove(val);
+                }
+
+                forwardMap.Remove(key);
+            }
         }
         /// <summary>
         /// Remove a key of type <see cref="T2"/> from the map
@@ -85,7 +94,16 @@ namespace Mirage.Collections
         /// <param name="key"></param>
         public void Remove(T2 key)
         {
-            reverseMap.Remove(key);
+            if (reverseMap.ContainsKey(key))
+            {
+                T1 val = reverseMap[key];
+                if (forwardMap.ContainsKey(val))
+                {
+                    forwardMap.Remove(val);
+                }
+
+                reverseMap.Remove(key);
+            }
         }
         /// <summary>
         /// Get the value of type <see cref="T2"/> given a key of type <see cref="T1"/>
@@ -127,22 +145,6 @@ namespace Mirage.Collections
         public int Count
         {
             get { return forwardMap.Count; }
-        }
-        /// <summary>
-        /// Get all the keys of the map as a list
-        /// </summary>
-        /// <returns></returns>
-        public List<T1> GetKeys()
-        {
-            return new List<T1>(this.forwardMap.Keys);
-        }
-        /// <summary>
-        /// Get all values of the map as a list
-        /// </summary>
-        /// <returns></returns>
-        public List<T2> GetValues()
-        {
-            return new List<T2>(this.reverseMap.Keys);
         }
     }
 }
