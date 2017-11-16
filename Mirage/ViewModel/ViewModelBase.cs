@@ -7,8 +7,6 @@ using System.Runtime.CompilerServices;
 
 namespace Mirage.ViewModel
 {
-    
-
     public abstract class ViewModelBase : INotifyPropertyChanged, IDisposable
     {
         private readonly string name;

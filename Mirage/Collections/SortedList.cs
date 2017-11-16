@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Mirage.Collections
 {
-    class SortedList<T> : ICollection<T>
+    public sealed class SortedList<T> : ICollection<T>
     {
         private readonly List<T> list;
         private readonly IComparer<T> comparer;

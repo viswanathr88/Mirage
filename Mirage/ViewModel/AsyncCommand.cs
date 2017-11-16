@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Mirage.ViewModel.Commands
 {
-    abstract class AsyncCommand<T> : CommandBase<T>, IAsyncCommand<T>
+    public abstract class AsyncCommand<T> : CommandBase<T>, IAsyncCommand<T>
     {
         public abstract override bool CanExecute(T param);
 
@@ -45,7 +45,7 @@ namespace Mirage.ViewModel.Commands
     }
 
 
-    abstract class AsyncCommand : AsyncCommand<VoidType>
+    public abstract class AsyncCommand : AsyncCommand<VoidType>
     {
         protected abstract bool CanExecute();
 
@@ -63,7 +63,7 @@ namespace Mirage.ViewModel.Commands
     }
 
 
-    abstract class AsyncCommand<T1, T2> : AsyncCommand<T2>, IAsyncCommand<T1, T2>
+    public abstract class AsyncCommand<T1, T2> : AsyncCommand<T2>, IAsyncCommand<T1, T2>
     {
         public T1 Result
         {

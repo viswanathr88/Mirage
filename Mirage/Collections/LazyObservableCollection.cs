@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Data;
 
 namespace Mirage.Collections
 {
-    sealed class LazyObservableCollection<TViewModel, TModel> : ObservableCollection<TViewModel>, ILazyObservableCollection<TViewModel>, ISupportIncrementalLoading
+    public sealed class LazyObservableCollection<TViewModel, TModel> : ObservableCollection<TViewModel>, ILazyObservableCollection<TViewModel>, ISupportIncrementalLoading
     {
         private readonly Func<IEnumerable<TModel>> collectionSourceFn;
         private readonly Func<TModel, TViewModel> adapterFn;

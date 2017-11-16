@@ -1,8 +1,6 @@
-﻿using Mirage.ViewModel.Commands;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.Threading.Tasks;
 
-namespace Mirage.ViewModel
+namespace Mirage.ViewModel.Commands
 {
     public interface IAsyncCommand<T> : ICommand<T>
     {
