@@ -8,7 +8,7 @@
     <owners>Viswanath Ramanan</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Mirage is a windows library that provides some common classes to write better MVVP applications. Mirage provides a command framework, a ViewModel framework and a bunch of collection classes that make it easy to write ViewModels for windows applications.</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes>None</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>application apps mvvm uwp wp viewmodel command</tags>
   </metadata>
