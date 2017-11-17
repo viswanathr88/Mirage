@@ -69,7 +69,6 @@
     <Compile Include="ViewModel\IDataViewModel.cs" />
     <Compile Include="ViewModel\IItemViewModel.cs" />
     <Compile Include="ViewModel\ItemViewModel.cs" />
-    <Compile Include="ViewModel\UriBuilder.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="ViewModel\VoidType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
