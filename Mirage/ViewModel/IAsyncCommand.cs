@@ -1,7 +1,6 @@
-﻿using Mirage.ViewModel.Commands;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace Mirage.ViewModel
+namespace Mirage.ViewModel.Commands
 {
     /// <summary>
     /// Represents an interface for an asynchronous command

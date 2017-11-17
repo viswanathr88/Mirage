@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Epiphany.Model.Collections
+namespace Mirage.Collections
 {
     public class TimedCache<T1,T2> : IDictionary<T1, T2>
     {

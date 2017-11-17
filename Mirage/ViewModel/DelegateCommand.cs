@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Mirage.ViewModel
+namespace Mirage.ViewModel.Commands
 {
     public class DelegateCommand : ICommand
     {
