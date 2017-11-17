@@ -9,7 +9,7 @@
     <Import_RootNamespace>Mirage_Test</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)BidirectionalMapTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\BidirectionalMapTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RelayCommandTest.cs" />
   </ItemGroup>
 </Project>
