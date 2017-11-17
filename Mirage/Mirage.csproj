@@ -68,7 +68,7 @@
     <Compile Include="ViewModel\Command.cs" />
     <Compile Include="ViewModel\CommandBase.cs" />
     <Compile Include="ViewModel\DataViewModel.cs" />
-    <Compile Include="ViewModel\DelegateCommand.cs" />
+    <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\ExecutedEventArgs.cs" />
     <Compile Include="ViewModel\IAsyncCommand.cs" />
     <Compile Include="ViewModel\ICommand.cs" />
