@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Mirage.ViewModel
+﻿namespace Mirage.ViewModel
 {
+    /// <summary>
+    /// Represents an Empty type that can be passed as command arguments
+    /// </summary>
     public class VoidType
     {
+        /// <summary>
+        /// Creates an empty type
+        /// </summary>
         public static VoidType Empty
         {
             get

@@ -4,7 +4,9 @@ using System.Windows.Input;
 
 namespace Mirage.ViewModel.Commands
 {
-
+    /// <summary>
+    /// An extended ICommand that provides progress
+    /// </summary>
     public interface ICommandEx : ICommand, INotifyPropertyChanged
     {
         /// <summary>
