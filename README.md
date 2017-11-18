@@ -5,8 +5,8 @@ Mirage is a windows library that provides some common classes to write better Mo
 
 Read more about MVVM [here](https://msdn.microsoft.com/en-us/library/hh848246.aspx).
 
-Who are the target audience?
-----------------------------
+Who is the target audience?
+---------------------------
 
 Developers who want to develop for Windows 8.1+, Windows Phone 8.1+ can use this library to extend their viewmodels. This library can also be used by Universal Windows Platform Apps (UWP Apps) running on all Windows 10 devices, Xbox One consoles, Holo Lens etc.
 
