@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Collections\BidirectionalMapTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\SortedListTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RelayCommandTest.cs" />
   </ItemGroup>
 </Project>
