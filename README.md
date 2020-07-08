@@ -23,7 +23,7 @@ The following are some of the features of this library:
 Design
 ------
  
-The library is portable across Windows Phone 8.1+ and Windows 8.1+. It can be compiled with Visual Studio 2015 only. Visual Studio 2017 does not support Windows Store apps (predecessor to the Universal Windows Platform)
+The library is a Universal Windows Class Library. The minimum SDK version is Win10 10240.
 
 License
 -------
