@@ -20,6 +20,13 @@ The following are some of the features of this library:
  * A DataViewModel class that can be used for ViewModels that load any kind of data and update properties. This also comes with an easy way to register and de-register commands that are part of the ViewModel.
  * Some collection classes like SortedList that are not part of the standard APIs provided by Microsoft.
  
+How to use?
+----------
+
+- Derive all ViewModel classes that are tied to a page from DataViewModel or DataViewModel<T> depending on what parameter is required to hydrate the page
+- Derive all synchronous commands from the Command class
+- Derive all asynchronous commands from the AsyncCommand class
+ 
 Design
 ------
  
