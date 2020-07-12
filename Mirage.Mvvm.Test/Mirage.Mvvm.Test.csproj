@@ -158,7 +158,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mirage.UWP\Mirage.UWP.csproj">
+    <ProjectReference Include="..\Mirage.Mvvm\Mirage.Mvvm.csproj">
       <Project>{2ad1508c-5af0-40b7-b0c6-dfc33799586c}</Project>
       <Name>Mirage.UWP</Name>
     </ProjectReference>

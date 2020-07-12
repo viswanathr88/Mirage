@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Mirage.Test", "Mirage.Test\Mirage.Test.shproj", "{DC7D0CB2-6D49-4F72-8AA7-D50D141E482A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirage.UWP", "Mirage.UWP\Mirage.UWP.csproj", "{2AD1508C-5AF0-40B7-B0C6-DFC33799586C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirage.Mvvm", "Mirage.Mvvm\Mirage.Mvvm.csproj", "{2AD1508C-5AF0-40B7-B0C6-DFC33799586C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirage.UWP.Test", "Mirage.UWP.Test\Mirage.UWP.Test.csproj", "{7310AEC6-6E0F-4D2E-BB4D-63F690F3AAF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mirage.Mvvm.Test", "Mirage.Mvvm.Test\Mirage.Mvvm.Test.csproj", "{7310AEC6-6E0F-4D2E-BB4D-63F690F3AAF9}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
