@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
-name: 3.0.$(Rev:rr).0
+name: 3.0.$(Rev:r).0
 
 variables:
   solution: '**/*.sln'
@@ -32,7 +32,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
-    packagesToPack: '**/Mirage.UWP.csproj'
+    packagesToPack: '**/Mirage.Mvvm.csproj'
     versioningScheme: 'byBuildNumber'
     includeSymbols: true
 
