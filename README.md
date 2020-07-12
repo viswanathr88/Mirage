@@ -1,6 +1,9 @@
 Mirage
 ======
-[NuGet](https://www.nuget.org/packages/Mirage.Mvvm/)
+
+[![Build Status](https://dev.azure.com/viswanath/Mirage.Mvvm/_apis/build/status/viswanathr88.Mirage?branchName=master)](https://dev.azure.com/viswanath/Mirage.Mvvm/_build/latest?definitionId=11&branchName=master)
+
+![NuGet](https://img.shields.io/nuget/v/Mirage.Mvvm.svg)
 
 Mirage is a windows library that provides some common classes to write better Model-View-ViewModel (MVVM) applications. Mirage provides a command framework, a ViewModel framework and a bunch of collection classes that make it easy to write ViewModels for windows applications. 
 
