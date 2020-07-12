@@ -32,7 +32,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
-    packagesToPack: '**/*.csproj'
+    packagesToPack: '**/Mirage.UWP.csproj'
     versioningScheme: 'byBuildNumber'
     includeSymbols: true
 
@@ -40,7 +40,7 @@ steps:
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   inputs:
     SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**\**.nupkg'
+    Contents: '**\Mirage*.nupkg'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
