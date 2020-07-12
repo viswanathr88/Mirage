@@ -9,6 +9,8 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+name: 3.0.$(Rev:rr).0
+
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
@@ -27,6 +29,21 @@ steps:
     solution: '$(solution)'
     configuration: '$(buildConfiguration)'
 
-- task: NuGetPackager@0
+- task: NuGetCommand@2
   inputs:
-    searchPattern: '**\*.nuspec'
+    command: 'pack'
+    packagesToPack: '**/*.csproj'
+    versioningScheme: 'byBuildNumber'
+    includeSymbols: true
+
+- task: CopyFiles@2
+  displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)'
+    Contents: '**\**.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
