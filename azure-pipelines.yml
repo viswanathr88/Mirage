@@ -35,12 +35,13 @@ steps:
     packagesToPack: '**/Mirage.Mvvm.csproj'
     versioningScheme: 'byBuildNumber'
     includeSymbols: true
+    buildProperties: "SymbolPackageFormat=snupkg"
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
   inputs:
     SourceFolder: '$(system.defaultworkingdirectory)'
-    Contents: '**\Mirage*.nupkg'
+    Contents: '**\Mirage*nupkg'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
