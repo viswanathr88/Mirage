@@ -12,10 +12,8 @@
     <summary>MVVM, ViewModels and Commands simplified</summary>
     <language>Neutral</language>
     <releaseNotes>None</releaseNotes>
-    <repository>
-      <url>https://github.com/viswanathr88/Mirage</url>
-      <type>git</type>
-    </repository>
+    <repository url="https://github.com/viswanathr88/Mirage"
+                type="git"></repository>
     <copyright>Copyright 2020</copyright>
     <tags>application apps mvvm uwp viewmodel command</tags>
   </metadata>
