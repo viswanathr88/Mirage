@@ -3,12 +3,17 @@
   <metadata>
     <id>Mirage.Mvvm</id>
     <version>$version$</version>
-    <title>$title$</title>
+    <title>Mirage MVVM</title>
     <authors>Viswanath Ramanan</authors>
     <owners>Viswanath Ramanan</owners>
+    <licenseUrl>https://github.com/viswanathr88/Mirage/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Mirage is a windows library that provides some common classes to write better MVVM applications. Mirage provides a command framework, a ViewModel framework and a bunch of collection classes that make it easy to write ViewModels for windows applications.</description>
+    <summary>MVVM, ViewModels and Commands simplified</summary>
+    <language>Neutral</language>
     <releaseNotes>None</releaseNotes>
+    <repository url="https://github.com/viswanathr88/Mirage"
+                type="git"></repository>
     <copyright>Copyright 2020</copyright>
     <tags>application apps mvvm uwp viewmodel command</tags>
   </metadata>
