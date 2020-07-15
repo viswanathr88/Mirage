@@ -11,6 +11,10 @@ namespace Mirage.ViewModel.Commands
     public abstract class AsyncCommand<T> : CommandBase<T>, IAsyncCommand<T>
     {
         /// <summary>
+        /// Gets or sets whether the command will execute in a background thread
+        /// </summary>
+        public bool ExecuteInBackgroundThread { get; set; } = false;
+        /// <summary>
         /// Gets whether the command can be executed with the given parameter
         /// </summary>
         /// <param name="param">Command parameter</param>
@@ -45,7 +49,14 @@ namespace Mirage.ViewModel.Commands
                 {
                     try
                     {
-                        await Task.Run(async () => await RunAsync(param));
+                        if (ExecuteInBackgroundThread)
+                        {
+                            await Task.Run(async () => await RunAsync(param));
+                        }
+                        else
+                        {
+                            await RunAsync(param);
+                        }
                         state = CommandExecutionState.Success;
                     }
                     catch (Exception ex)
