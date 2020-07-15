@@ -12,6 +12,7 @@ namespace Mirage.ViewModel.Commands
     {
         private bool isExecuting;
         private Exception error;
+        private bool canExecuteCommand = true;
         /// <summary>
         /// Gets whether the command can be executed
         /// </summary>
@@ -122,7 +123,7 @@ namespace Mirage.ViewModel.Commands
         /// <summary>
         /// Protected method that should be called by derived classes to indicate canexecute has changed
         /// </summary>
-        protected void RaiseCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        private void RaiseCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         /// <summary>
         /// Event that is fired when a property on the command changes
         /// </summary>
@@ -146,6 +147,13 @@ namespace Mirage.ViewModel.Commands
                 param = (T)parameter;
 
             return param;
+        }
+        /// <summary>
+        /// Evaluate whether the command can be executed again
+        /// </summary>
+        public void EvaluateCanExecute()
+        {
+            RaiseCanExecuteChanged();
         }
     }
 }

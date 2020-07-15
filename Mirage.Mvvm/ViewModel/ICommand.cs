@@ -47,6 +47,10 @@ namespace Mirage.ViewModel.Commands
         {
             get;
         }
+        /// <summary>
+        /// Notify the command to re-evaluate the state of execution
+        /// </summary>
+        void EvaluateCanExecute();
     }
 
     /// <summary>
