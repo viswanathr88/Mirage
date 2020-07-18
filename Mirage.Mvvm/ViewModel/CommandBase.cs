@@ -12,7 +12,6 @@ namespace Mirage.ViewModel.Commands
     {
         private bool isExecuting;
         private Exception error;
-        private bool canExecuteCommand = true;
         /// <summary>
         /// Gets whether the command can be executed
         /// </summary>

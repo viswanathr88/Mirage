@@ -43,7 +43,10 @@ namespace Mirage.ViewModel
             }
             set
             {
-                SetProperty(ref this.isSelected, value);
+                if (SetProperty(ref this.isSelected, value))
+                {
+                    OnSelectionChanged();
+                }
             }
         }
         /// <summary>
@@ -59,6 +62,13 @@ namespace Mirage.ViewModel
             {
                 SetProperty(ref this.isLoading, value);
             }
+        }
+        /// <summary>
+        /// Function that is called when the item is selected
+        /// </summary>
+        protected virtual void OnSelectionChanged()
+        {
+
         }
         /// <summary>
         /// Gets the model object
