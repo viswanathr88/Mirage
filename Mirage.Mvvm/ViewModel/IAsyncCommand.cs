@@ -20,4 +20,9 @@ namespace Mirage.ViewModel.Commands
     {
 
     }
+
+    public interface IAsyncCommand : IAsyncCommand<VoidType>
+    {
+
+    }
 }
