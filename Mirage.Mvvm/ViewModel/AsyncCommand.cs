@@ -106,8 +106,12 @@ namespace Mirage.ViewModel.Commands
     /// <summary>
     /// Represents a async command class that does not need a parameter to execute
     /// </summary>
-    public abstract class AsyncCommand : AsyncCommand<VoidType>
+    public abstract class AsyncCommand : AsyncCommand<VoidType>, IAsyncCommand
     {
+        /// <summary>
+        /// Gets an empty parameter for binding easily from the UI
+        /// </summary>
+        public VoidType EmptyParameter => VoidType.Empty;
         /// <summary>
         /// Gets whether the command can be executed
         /// </summary>
