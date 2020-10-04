@@ -31,6 +31,11 @@ namespace Mirage.ViewModel.Commands
         /// <returns>True if the command can be executed with the given parameter; false otherwise</returns>
         public bool CanExecute(object parameter)
         {
+            if (typeof(T) == typeof(VoidType) && parameter == null)
+            {
+                return CanExecute(VoidType.Empty);
+            }
+
             if (parameter == null)
                 return false;
 

@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Collections\BidirectionalMapTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collections\SortedListTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\NoParameterAsyncCommandTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\NoParameterCommandTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RelayCommandTest.cs" />
   </ItemGroup>
 </Project>
